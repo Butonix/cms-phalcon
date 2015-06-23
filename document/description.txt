@@ -1,0 +1,15 @@
+- Mỗi một bài viết được phân chia thành nhiều nhóm. Mỗi một nhóm có nhiều bài 
+viết khác nhau. Mỗi bài viết chỉ được tạo và chỉnh sữa bởi một người. Trong bài
+viết có tiêu đề, nội dung tóm lượt, nội dung, hình ảnh đại diện.
+
+- SEO: với mỗi bài viết sẽ có một tiêu đề trang (title), keywords, Description.
+Cho setup một SEO Default, hiển thị khi post bài viết, và người dùng có thể 
+custum hoặc dùng mặc định.
+
+- Người dùng: đăng nhập vào hệ thống, có quyền tạo bài, và edit các bài viết 
+của mình đã tạo. Bài viết sẽ có chế độ review và public, review thì chỉ có mình
+xem dc nhưng không hiển thị cho guest (là người dùng ko cần đăng nhập vào hệ
+thống) xem. Còn public thì ai cũng xem dc.
+
+- Admin: có quyền quản trị, thêm và chỉnh sữa các quyền cho các user. Chỉnh sữa
+ các nhóm bài viết.
