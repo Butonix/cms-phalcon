@@ -446,12 +446,12 @@
 			<div class="footer-copyright">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-1">
+						<div class="col-md-2">
 							<a class="logo" href="index.html">
 								B Team - ISC
 							</a>
 						</div>
-						<div class="col-md-7">
+						<div class="col-md-6">
 							<p>
 								&copy; Copyright 2014 by B Team - ISC. All Rights Reserved.
 							</p>
