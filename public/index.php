@@ -2,32 +2,38 @@
 
 error_reporting(E_ALL);
 
-define('APP_PATH', realpath('..'));
+use Phalcon\Loader;
+use Phalcon\Mvc\Router;
+use Phalcon\DI\FactoryDefault;
+use Phalcon\Mvc\Application as BaseApplication;
+use Phalcon\Mvc\Url as UrlResolver;
 
-try {
+class Application extends BaseApplication
+{
 
-    /**
-     * Read the configuration
-     */
-    $config = include APP_PATH . "/app/config/config.php";
+	/**
+	 * Register the services here to make them general or register in the ModuleDefinition to make them module-specific
+	 */
+	protected function registerServices()
+	{
+		// $config = include __DIR__ . "/../apps/config/config.php";
+		require __DIR__ . '/../apps/config/services.php';
+	}
+	public function main()
+	{
 
-    /**
-     * Read auto-loader
-     */
-    include APP_PATH . "/app/config/loader.php";
+		$this->registerServices();
 
-    /**
-     * Read services
-     */
-    include APP_PATH . "/app/config/services.php";
+		//Register the installed modules
+		/**
+	     * Include modules
+	     */
+	    require __DIR__ . '/../apps/config/modules.php';
 
-    /**
-     * Handle the request
-     */
-    $application = new \Phalcon\Mvc\Application($di);
+		echo $this->handle()->getContent();
+	}
 
-    echo $application->handle()->getContent();
-
-} catch (\Exception $e) {
-    echo $e->getMessage();
 }
+
+$application = new Application();
+$application->main();

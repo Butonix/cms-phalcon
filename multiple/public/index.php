@@ -16,6 +16,7 @@ class Application extends BaseApplication
 	 */
 	protected function registerServices()
 	{
+		// $config = include __DIR__ . "/../apps/config/config.php";
 		require __DIR__ . '/../apps/config/services.php';
 	}
 	public function main()
