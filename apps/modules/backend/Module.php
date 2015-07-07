@@ -7,7 +7,7 @@ use Phalcon\Mvc\View;
 use Phalcon\Mvc\Dispatcher;
 use Phalcon\DiInterface;
 use Phalcon\Db\Adapter\Pdo\Mysql as Database;
-
+use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 
 class Module
 {
@@ -44,10 +44,32 @@ class Module
 		});
 
 		//Registering the view component
-		$di->set('view', function() {
-			$view = new View();
-			$view->setViewsDir('../apps/backend/views/');
-			return $view;
+		// $di->set('view', function() {
+		// 	$view = new View();
+		// 	$view->setViewsDir('../apps/backend/views/');
+		// 	return $view;
+		// });
+		$di->set('view', function () use ($config) {
+		    $view = new \Phalcon\Mvc\View();
+
+		    $view->setViewsDir($config->backend->viewsDir);
+
+		    $view->registerEngines(array(
+		        '.volt' => function ($view, $di) use ($config) {
+
+		            $volt = new VoltEngine($view, $di);
+
+		            $volt->setOptions(array(
+		                'compiledPath' => $config->application->cacheDir,
+		                'compiledSeparator' => '_'
+		            ));
+
+		            return $volt;
+		        },
+		        '.phtml' => 'Phalcon\Mvc\View\Engine\Php'
+		    ));
+
+		    return $view;
 		});
 
 		//Set a different connection in each module

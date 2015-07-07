@@ -10,7 +10,7 @@ class IndexController extends Controller
 	public function indexAction()
 	{
 		var_dump('IndexController zingAction');
-		die();
-		return $this->response->forward('login');
+		//die();
+		//return $this->response->forward('login');
 	}
 }

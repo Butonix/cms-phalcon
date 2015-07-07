@@ -1,3 +1,4 @@
+#[Front-End]
 #https://github.com/daneden/animate.css
 animate.css
 
@@ -68,3 +69,35 @@ stellar.js == v0.6.2
 
 #https://github.com/hotstudio/touchy
 touchy
+
+#[Back-end:Front-End]
+
+#https://github.com/noraesae/perfect-scrollbar
+perfect-scrollbar == 0.6.3
+
+#https://github.com/jquery/jquery-mousewheel
+jquery-mousewheel == 3.1.13
+
+#https://github.com/extremeFE/bootstrap-colorpalette
+bootstrap-colorpalette
+
+#https://github.com/fronteed/iCheck
+iCheck==1.0.2
+
+#https://github.com/arshaw/fullcalendar
+fullcalendar==2.3.2
+
+#http://lesscss.org/
+lesscss==v2.5.1
+
+#https://github.com/gwatts/jquery.sparkline/
+jquery.sparkline==2.1.2
+
+#http://github.com/rendro/easy-pie-chart/
+easy-pie-chart==2.1.6
+
+#https://github.com/furf/jquery-ui-touch-punch/
+jquery-ui-touch-punch==0.2.3
+
+#https://github.com/moment/moment/
+moment==2.10.3

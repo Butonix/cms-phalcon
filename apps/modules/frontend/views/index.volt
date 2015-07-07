@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <!-- /**
+<!-- /**
  * CMS Project
  * 
  * @version 1.x
@@ -453,7 +453,7 @@
 						</div>
 						<div class="col-md-6">
 							<p>
-								&copy; Copyright 2014 by B Team - ISC. All Rights Reserved.
+								&copy; Copyright 2015 by B Team - ISC. All Rights Reserved.
 							</p>
 						</div>
 						<div class="col-md-4">
