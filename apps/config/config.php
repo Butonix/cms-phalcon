@@ -5,7 +5,7 @@ return new \Phalcon\Config(array(
         'host'     => 'localhost',
         'username' => 'root',
         'password' => '',
-        'dbname'     => 'phalcon',
+        'dbname'     => 'cmsisc',
     ),
     'application' => array(
         'controllersDir' => __DIR__ . '/../controllers/',

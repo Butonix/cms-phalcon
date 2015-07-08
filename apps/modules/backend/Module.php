@@ -19,8 +19,11 @@ class Module
 
 		$loader->registerNamespaces(array(
 			'Modules\Backend\Controllers' => __DIR__ .'/controllers/',
-			'Modules\Backend\Models'      => '../apps/backend/models/',
+			// 'Modules\Backend\Models'      => '../apps/backend/models/',
 			'Modules\Backend\Plugins'     => '../apps/backend/plugins/',
+			'Modules\Models\Accounts' => __DIR__ . '/../../models/accounts/'
+            // 'Modules\Models\Services' => __DIR__ . '/../../models/services/',
+            // 'Modules\Models\Repositories' => __DIR__ . '/../../models/repositories/'
 		));
 
 		$loader->register();
@@ -73,7 +76,7 @@ class Module
 		});
 
 		//Set a different connection in each module
-		$di->set('db', function() {
+		$di->set('db', function() use ($config) {
 			return new Database(
 				$config->database->toArray()
 				// array(
